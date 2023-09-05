@@ -1,0 +1,188 @@
+/* características gerais */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(192, 179, 152);
+
+
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(109, 49, 16); ;
+    border-radius: 10px;
+
+}
+
+#IconePotian {
+    padding: auto;
+    margin-left: 2%;
+}
+
+span{
+    font-family: 'Rowdies', cursive;
+    margin-left: 30%;
+    padding: 5%;
+    font-size: xx-large;
+    color: rgb(109, 49, 16);
+}
+
+#BarraPesquisa{
+    margin-left: 5%;
+}
+
+span::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background:  rgb(248, 120, 188);
+    left: 0;
+    bottom: -4px;
+    transition: ease .40s;
+
+}
+
+span:hover::after {
+    width: 100%;
+}
+
+
+#btn::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(248, 120, 188);
+    left: 0;
+    bottom: -4px;
+    transition: ease .40s;
+
+}
+
+#btn:hover::after {
+    width: 100%;
+}
+
+/* footer */
+
+footer{
+    width: 100%;
+    color: black;
+    position: absolute;
+    margin-top: 50%;
+}
+
+#footerContent{
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 242, 215) ;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 3rem 3.5rem;
+    
+}
+
+#footerContacts h3{
+    font-family: 'Rowdies', cursive;
+    color: rgb(109, 49, 16);
+    margin-bottom: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.footerList{
+   
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none
+}
+
+.footerList .footerLink{
+   
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    transition: all .40s;
+}
+
+.footerList .footerLink:hover{
+    color: rgb(84, 184, 255);
+}
+
+#footerCopyRight{
+    
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    background-color:  rgb(255, 242, 215) ;
+    font-size: 0.9em;
+    padding: 1.5rem ;
+    font-weight: 100;
+    margin-bottom: 1%;
+}
+
+
+#footerCopyRight a{
+    margin-left: 2%;
+    text-decoration: none;
+    color: black;
+    font-weight: 300;
+}
+
+#footerCopyRight a:hover{
+    color: rgb(84, 184, 255) ;
+}
+
+@media screen and (max-width: 768px){
+    #footerContent{
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+}
+
+    .box h5{
+        position: relative;
+
+    }
+
+    .box img {
+        
+        max-width: 100%;
+        width: 200px;
+        height: 200px;
+
+}
+
+@media screen and (max-width: 426px){
+    #footerContent{
+        grid-template-columns: repeat(1,1fr);
+        padding: 3rem 2rem;
+    }
+}
+
+@media screen and (max-width: 400px){
+    
+}
+
+@media screen and (max-width: 393px){
+    
+}
+
+@media screen and (max-width: 360px){
+    
+
+}
+
+@media screen and (max-width: 280px){
+
+    html{ 
+        display: flex  ;
+    }
+}
