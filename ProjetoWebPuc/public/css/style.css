@@ -35,8 +35,40 @@ span {
     color: rgb(109, 49, 16);
 }
 
+span2 {
+    color: rgb(109, 49, 16);
+}
+
 #BarraPesquisa {
     margin-left: 5%;
+}
+
+.login{
+    display: flex;
+    margin-left: 50%;
+    padding: auto;
+}
+
+span2:hover{
+    color: rgb(84, 184, 255);  
+    transition: 0.2s;
+}
+
+.entrecad{
+    font-size: 20px ;
+}
+
+.bi-basket2-fill{
+    display: flex;
+    padding: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: rgb(109, 49, 16);;
+}
+
+.bi-basket2-fill:hover{
+    color: rgb(84, 184, 255);  
+    transition: 0.2s;
 }
 
 span::after {
@@ -76,7 +108,7 @@ span:hover::after {
 
 .card {
     background: url(../img/fundo2.avif);
-    border-radius: 15px;
+    border-radius: 10px;
     border: none;
     box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.9);
     text-align: center;
@@ -85,6 +117,7 @@ span:hover::after {
 
 .card:hover {
     cursor: pointer;
+    /* filter: brightness(50%); */
 }
 
 .card-img-top {
@@ -111,6 +144,7 @@ span:hover::after {
     width: 100%;
     background-color: rgb(17, 148, 104);
     color: aliceblue;
+    
 }
 
 #btnshop::after {
@@ -123,11 +157,11 @@ span:hover::after {
     left: 70;
     bottom: -4px;
     transition: ease .40s;
-
 }
 
 #btnshop:hover::after {
     width: 100%;
+    
 }
 
 
