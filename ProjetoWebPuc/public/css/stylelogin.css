@@ -1,0 +1,23 @@
+/* container */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.first-content{
+    display: flex;
+}
+
+.back-content{
+    height: 200px;
+    width: 10px;
+}

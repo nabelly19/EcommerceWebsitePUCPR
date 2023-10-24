@@ -10,16 +10,20 @@
 
 ::-webkit-scrollbar {
     width: 10px;
-    background-color: rgb(192, 179, 152);
-
-
+    background-color: rgb(32, 46, 33);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(109, 49, 16);
+    background-color: rgb(192, 179, 152);
     ;
     border-radius: 10px;
 
+}
+
+hmtl, body{
+    height: 100%;
+    /* background: rgb(234, 227, 212); */
+    background: rgb(32, 46, 33);
 }
 
 #IconePotian {
@@ -58,15 +62,16 @@ span2:hover{
     font-size: 20px ;
 }
 
-.bi-basket2-fill{
+.bi-cart-fill{
     display: flex;
     padding: auto;
     margin-left: 20px;
     margin-right: 20px;
-    color: rgb(109, 49, 16);;
+    color: rgb(109, 49, 16);
+    font-size: 25px;
 }
 
-.bi-basket2-fill:hover{
+.bi-cart-fill:hover{
     color: rgb(84, 184, 255);  
     transition: 0.2s;
 }
@@ -87,6 +92,25 @@ span:hover::after {
     width: 100%;
 }
 
+span2::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: rgb(248, 120, 188);
+    left: 0;
+    bottom: -4px;
+    transition: ease .40s;
+
+}
+
+span2:hover::after {
+    width: 100%;
+}
+
+.btn-outline-dark{
+    border: none;
+}
 
 #btn::after {
     content: '';
@@ -107,7 +131,7 @@ span:hover::after {
 /* card */
 
 .card {
-    background: url(../img/fundo2.avif);
+    background: url(../img/kk.png);
     border-radius: 10px;
     border: none;
     box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.9);
@@ -120,6 +144,30 @@ span:hover::after {
     /* filter: brightness(50%); */
 }
 
+.card-content{
+    background: none;
+    font-family: 'Rowdies', cursive;
+    font-size: large;
+    color: rgb(243, 205, 237);
+    text-shadow:1px 1px 2px rgba(109, 109, 109, 0.426) ;
+    margin-bottom: 5%;
+}
+
+.card-price{
+    background: none;
+    font-size: large;
+    color: white;
+    text-shadow:1px 1px 2px rgba(109, 109, 109, 0.426) ;
+    margin-bottom: 5%;
+}
+
+
+.card-body{
+    display: flex;
+    padding: auto;
+    margin-bottom: 5%;
+}
+
 .card-img-top {
     border-radius: 15px;
     display: flex;
@@ -128,6 +176,10 @@ span:hover::after {
     height: 200px;
     border-radius: 15px;
     object-fit: cover;
+}
+
+.card-img-top:hover{
+    filter: brightness(50%);
 }
 
 .card-text {
