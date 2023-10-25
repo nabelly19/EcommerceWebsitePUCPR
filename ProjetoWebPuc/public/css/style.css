@@ -216,6 +216,61 @@ span2:hover::after {
     
 }
 
+/* modais */
+
+.modal-content{
+    background-color: rgba(208, 249, 162, 0.87);
+}
+
+.senhasDesign{
+    display: flex;
+}
+
+.bi-eye{
+    position: absolute;
+    cursor: pointer;
+    color: #000000;
+    top: 60%;
+    right: 29%;
+}
+
+.bi-eye-slash{
+    position: absolute;
+    cursor: pointer;
+    color: #000000;
+    top: 60%;
+    right: 29%;
+}
+
+#eye{
+    position: absolute;
+    cursor: pointer;
+    color: #000000;
+    top: 59.7%;
+    right: 26%;
+}
+
+#eyetwo{
+    position: absolute;
+    cursor: pointer;
+    color: #000000;
+    top: 79.5%;
+    right: 26%;
+}
+
+.forgot a {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+    transition: all .40s;
+    cursor: pointer;
+}
+
+.forgot a:hover {
+    color: rgb(84, 184, 255);
+}
+
+
 
 /* footer */
 

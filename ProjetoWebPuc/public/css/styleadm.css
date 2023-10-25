@@ -48,8 +48,35 @@
 
 .bi-person-fill-up{
   color: #d9d9d9;
-  font-size: 70px;
+  font-size: 70px; 
+}
 
+.bi-person-fill-up:hover{
+  cursor: pointer;
+}
+
+.bi-plus-lg{
+  color: #d9d9d9;
+  font-size: 70px; 
+}
+
+#Adicionar{
+  display: flex;
+  padding: auto;
+}
+
+.bi-dash-lg{
+  color: #d9d9d9;
+  font-size: 70px; 
+}
+
+#Remover{
+  display: flex;
+  padding: auto;
+}
+
+a{
+  text-decoration: none;
 }
 
 @keyframes animate {
