@@ -21,9 +21,15 @@
     <link rel="stylesheet" href="../../public/css/styleadm.css">
 
     <link rel="shortcut icon" href="../../public/img/LOGO.ico" type="image/x-icon">
+    <script defer src="..controllers/back.js"></script>
 </head>
 
 <body>
+    <!--adicionar:
+        nome
+        estoque
+        valor
+     -->
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
             <div class="container-fluid">
@@ -42,6 +48,29 @@
             </div>
         </nav>
     </header>
+
+    <div class="sign_product">
+        <div class="sign_product_header">
+            <img src="../../public/img/LOGO.ico" class="potian_logo_product">
+            <h1 class="product_form_title"> Cadastre seu novo produto!</h1>
+        </div>
+        <div class="sign_product_body" >
+
+            <form class="sign_product_form" id="product_form">
+                <label class="label_form_product" for="name"> Nome do Produto:</label> <br>
+                <input class="input_form_product" type="text" name="name"> <br> <br>
+                <label class="label_form_product" for="prices">Valor do Produto: </label> <br><!-- fomatar este float-->
+                <input class="input_form_product" type="number" name="prices" min="0" step=".01" placeholder="  R$0.00"> <br> <br>
+                <label class="label_form_product" for="stock"> Estoque:</label> <br>
+                <input class="input_form_product" type="text" name="stock"> <br> <br>
+                <label class="label_form_product" for="file"> Selecione a imagem do seu produto:</label> <br>
+                <input type="file" name="arquivos" class="btn_form_prodcut" name="image" accept="image/png, image/jpeg"/> <br> <br>
+                <div class="submit_product">
+                    <button type="button" onclick="post_product()" class="submit_button_product"> ENVIAR </button>
+                </div>
+            </form>
+
+    </div>
 
 </body>
 </html>
