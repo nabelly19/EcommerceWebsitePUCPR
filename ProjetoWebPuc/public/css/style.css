@@ -26,6 +26,8 @@ hmtl, body{
     background: rgb(32, 46, 33);
 }
 
+/* NAVBAR */
+
 #IconePotian {
     padding: auto;
     margin-left: 2%;
@@ -136,6 +138,8 @@ span2:hover::after {
     border: none;
     box-shadow: 2px 2px 5px rgba(109, 109, 109, 0.9);
     text-align: center;
+    margin-right: 90px;
+    margin-bottom: 40px;
 
 }
 
@@ -196,27 +200,9 @@ span2:hover::after {
     width: 100%;
     background-color: rgb(17, 148, 104);
     color: aliceblue;
-    
 }
 
-#btnshop::after {
-    content: '';
-    position: absolute;
-    width: 0%;
-    height: 38px;
-    margin: 20px;
-    background: rgb(17, 148, 104);
-    left: 70;
-    bottom: -4px;
-    transition: ease .40s;
-}
-
-#btnshop:hover::after {
-    width: 100%;
-    
-}
-
-/* modais */
+/* modais da tela adm login*/
 
 .modal-content{
     background-color: rgba(208, 249, 162, 0.87);
@@ -341,42 +327,107 @@ footer {
     color: rgb(84, 184, 255);
 }
 
-@media screen and (max-width: 768px) {
-    #footerContent {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-}
+/* ANIMACAO DO BOTAO */
 
-.box h5 {
+#btnshop {
+    width: 100%;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #169000;
+    cursor: pointer;
     position: relative;
-
+    z-index: 0;
+    border-radius: 10px;
+    
 }
 
-.box img {
-
-    max-width: 100%;
-    width: 200px;
-    height: 200px;
-
+#btnshop:before {
+    content: '';
+    background: linear-gradient(45deg, #00ff2f, #1bff45, #0fcd31, #16e63c, #12ff3e, #4aff6b, #70ff8a, #7aff93, #7eff95);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
 }
 
-@media screen and (max-width: 426px) {
-    #footerContent {
-        grid-template-columns: repeat(1, 1fr);
-        padding: 3rem 2rem;
+#btnshop:active {
+    color: #166609
+}
+
+#btnshop:active:after {
+    background: transparent;
+}
+
+#btnshop:hover:before {
+    opacity: 1;
+}
+
+#btnshop:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #2e9415;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+
+
+@media screen and (min-width: 501px) and (max-width: 1042px){
+    .collapse .login{
+        margin-left: 42px;
     }
 }
 
-@media screen and (max-width: 400px) {}
-
-@media screen and (max-width: 393px) {}
-
-@media screen and (max-width: 360px) {}
-
-@media screen and (max-width: 280px) {
-
-    html {
-        display: flex;
+@media screen and (min-width: 414px ) and (max-width: 500px) {
+    .collapse .login{
+        margin-left: 20px;
     }
-}
+  }
+  
+  @media screen and (min-width: 360px) and (max-width: 413px) {
+    .collapse .login{
+        margin-left: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 280px) {
+  
+    span {
+      font-family: 'Rowdies', cursive;
+      margin-left: 5%;
+      padding: 5%;
+      font-size: xx-large;
+      color: rgb(109, 49, 16);
+  }
+
+    .collapse .login{
+        margin-left: 15px;
+    }
+  
+  html {
+    display: flex;
+  }
+  
+    
+  }
+  
+

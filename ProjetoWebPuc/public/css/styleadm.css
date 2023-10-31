@@ -55,6 +55,8 @@
   cursor: pointer;
 }
 
+/* REMOVER OU ADICIONAR PRODUTO */
+
 .bi-plus-lg{
   color: #d9d9d9;
   font-size: 70px; 
@@ -63,6 +65,7 @@
 #Adicionar{
   display: flex;
   padding: auto;
+  font-size: small;
 }
 
 .bi-dash-lg{
@@ -73,10 +76,21 @@
 #Remover{
   display: flex;
   padding: auto;
+  font-size: small;
 }
+
+
 
 a{
   text-decoration: none;
+}
+
+/* BOTAO VOLTAR DE REMOVER PRODUTO E ADD PRODUTO */
+
+.back .btn-warning{
+  display: flex;
+  margin-left: 50%;
+  padding: auto;
 }
 
 @keyframes animate {
@@ -109,3 +123,81 @@ a{
     );
   }
 }
+
+@media screen and (min-width: 1280px) and (max-width: 1300px){
+  .text-center h1{
+    margin-left: 15%;
+  }
+}
+
+@media screen and (min-width: 501px) and (max-width: 1042px){
+  .text-center h1{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 414px ) and (max-width: 500px) {
+  #Adicionar{
+    display: flex;
+    padding: auto;
+    font-size: medium;
+    width: 100%;
+  }
+
+  #Remover{
+    display: flex;
+    padding: auto;
+    font-size: medium;
+    width: 100%;
+  }
+
+  .text-center h1{
+    display: none;
+  }
+}
+
+@media screen and (min-width: 360px) and (max-width: 413px){
+  .text-center h1{
+    display: none;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #Adicionar{
+    display: flex;
+    padding: auto;
+    font-size: xx-small;
+  }
+
+  #Remover{
+    display: flex;
+    padding: auto;
+    font-size: xx-small;
+  }
+
+  .subtitle h2{
+    color: #d9d9d9;
+    text-shadow:1px 1px 2px rgba(0, 0, 0, 0.616) ;
+    font-size: medium;
+  }
+
+  span {
+    font-family: 'Rowdies', cursive;
+    margin-left: 5%;
+    padding: 5%;
+    font-size: xx-large;
+    color: rgb(109, 49, 16);
+}
+
+html {
+  display: flex;
+}
+
+.text-center h1{
+  display: none;
+}
+
+  
+}
+
+@media screen and (max-width: 360px) {}
