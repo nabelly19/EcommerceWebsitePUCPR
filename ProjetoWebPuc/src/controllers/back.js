@@ -60,7 +60,7 @@ window.onload = async function () {
         <div class="row col-10 mx-auto">
         <div class="card" style="width: 18rem;">
             <div class="card-body">
-                <img src="../../public/img/LOGO.png" class="card-img-top mt-5" alt="...">
+                <img src="${json_card[i].imagem}" class="card-img-top mt-5" alt="...">
             </div>
             <div class="card-content">content</div>${json_card[i].titulo}
             <div class="card-price">prices</div>${json_card[i].valor}

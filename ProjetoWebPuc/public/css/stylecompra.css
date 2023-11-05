@@ -1,0 +1,129 @@
+h2{
+    font-size: 25px;
+    color: aliceblue;
+}
+
+fieldset{
+    border: none;
+    padding: 0;
+}
+
+fieldset div {
+    margin-bottom: 24px;
+}
+
+label{
+    display: block;
+    margin-bottom: 10px;
+    color: aliceblue;
+}
+
+label spanf {
+    color: red;
+}
+
+input, select {
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 10px;
+    width: 200px;
+}
+
+select {
+    background: transparent;
+    box-shadow: none;
+    color: rgb(0, 212, 21);
+    -webkit-appearance: none;
+    width: 100%;
+    
+}
+
+.select-wrapper{
+    position: relative;
+    width: 222px;
+}
+
+.select-wrapper::after{
+    content: "<  >";
+    color: #ffffff;
+    font-size: 18px;
+    top: 8px;
+    right: 0;
+    transform: rotate(90deg);
+    position: absolute;
+    z-index: -1;
+}
+
+.input-simples input{
+    width: 420px;
+}
+
+.input-duplo {
+    display: flex;
+}
+
+.input-duplo > div {
+    margin-right: 15px;
+}
+
+input:valid{
+    border: 2px solid green;
+}
+
+input:invalid{
+    border:2px solid red;
+}
+
+.radio input {
+    float: left;
+    margin-right: 10px;
+    width: auto;
+}
+
+.button {
+width: 224px;
+padding: 10;
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1300px){
+  }
+  
+  @media screen and (min-width: 501px) and (max-width: 1042px){
+    .input-simples input{
+        width: 200px;
+    }
+  }
+  
+  @media screen and (min-width: 414px ) and (max-width: 500px) {
+    .input-simples input{
+        width: 200px;
+    }
+
+    .input-duplo {
+        display: block;
+    }
+   
+  }
+  
+  @media screen and (min-width: 360px) and (max-width: 413px){
+    .input-simples input{
+        width: 200px;
+    }
+   
+    .input-duplo {
+        display: block;
+    }
+  }
+  
+  @media screen and (max-width: 280px) {
+    .input-simples input{
+        width: 200px;
+    }
+
+    .input-duplo {
+        display: block;
+    }
+   
+    
+  }
+  

@@ -19,6 +19,7 @@
 
     <link rel="stylesheet" href="../../public/css/style.css">
     <link rel="stylesheet" href="../../public/css/styleadm.css">
+    <link rel="stylesheet" href="../../public/css/stylecompra.css">
 
     <link rel="shortcut icon" href="../../public/img/LOGO.ico" type="image/x-icon">
 </head>
@@ -43,5 +44,96 @@
         </nav>
     </header>
 
+    <div class="subtitle">
+        <h2>Finalizar Compra </h2>
+    </div>
+
+    <form action="url" method="post">
+        <fieldset>
+            <h2 class="mb-4">Endereço Para a Entrega</h2>
+            <div class="input-duplo">
+                <div>
+                    <label for="nomecliente">Nome e Sobrenome: <spanf>*</spanf></label>
+                    <input type="text" name="nomecliente" id="nomecliente" required>
+                </div>
+                <div>
+                    <label for="cep">CEP: <spanf>*</spanf></label>
+                    <input type="text" name="cep" id="cep" required>
+                </div>
+            </div>
+            <div class="input-simples">
+                <div>
+                    <label for="endereco">Endereço: <spanf>*</spanf></label>
+                    <input type="text" name="endereco" id="endereco" required>
+                </div>
+            </div>
+            <div class="input-duplo">
+                <div>
+                    <label for="numeroresi">Número: <spanf>*</spanf></label>
+                    <input type="number" name="numeroresi" id="numeroresi" required>
+                </div>
+                <div>
+                    <label for="estado">Estado: <spanf>*</spanf></label>
+                    <input type="text" name="estado" id="estado" required>
+                </div>
+            </div>
+            <div class="input-duplo">
+                <div>
+                    <label for="cpfcliente">CPF: <spanf>*</spanf></label>
+                    <input type="text" name="cpfcliente" id="cpfcliente" required>
+                </div>
+                <div>
+                    <label for="cidade">Cidade</label>
+                    <div class="select-wrapper">
+                        <select name="cidade" id="cidade">
+                            <option value="curitiba">Curitiba</option>
+                            <option value="araucaria">Araucária</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="input-simples">
+                <div>
+                    <label for="complemento">CPF: <spanf>*</spanf></label>
+                    <input type="text" name="complemento" id="complemento" required>
+                </div>
+                <div>
+                    <label for="endereco">Email: <spanf>*</spanf></label>
+                    <input type="email" name="endereco" id="endereco" required>
+                </div>
+            </div>
+            <div class="input-duplo">
+                <div>
+                    <label for="datanasc">Data de Nascimento: <spanf>*</spanf></label>
+                    <input type="date" name="datanasc" id="datanasc" required>
+                </div>
+                <div>
+                    <label for="sexo">Sexo</label>
+                    <div class="select-wrapper">
+                        <select name="sexo" id="sexo">
+                            <option value="F">Feminino</option>
+                            <option value="M">Masculino</option>
+                            <option value="O">Outro</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <h2 class="mb-4">Opção de Envio</h2>
+            <div class="radio">
+                <input type="radio" name="check-envio" id="check-envio-normal" value="check-envio-normal">
+                <label for="check-envio-normal">Normal</label>
+            </div>
+            <div class="radio">
+                <input type="radio" name="check-envio" id="check-envio-expresso" value="check-envio-expresso">
+                <label for="check-envio-expresso">Expresso</label>
+            </div>
+            <div class="button">
+            <button type="submit" class="btn mb-3" id="btnshop">Finalizar</button>
+            </div>
+        </fieldset>
+    </form>
+
 </body>
+
 </html>

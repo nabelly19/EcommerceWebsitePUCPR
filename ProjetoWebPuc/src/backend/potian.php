@@ -1,7 +1,7 @@
 <?php
     //conectando ao meu BD
 
-    $db_connection = mysqli_conect("localhost: 3306", "root", "?f3£b1S4uL!dbx", "potian_final");
+    $db_connection = mysqli_conect("localhost: 3306", "root", "1234", "potian_final");
     
         // Verificar a conexão
     if ($db_connection->connect_error) {
@@ -49,52 +49,52 @@
 
         // Função para verificar se o nome de usuário já existe
 
-    function isUsernameTaken($db_connection, $username_signIN) {
-        $sql_isUserTaken = "SELECT e-mail FROM login WHERE e-mail = '$username_signIN'";
-        $result = $db_connection->query($sql_isUserTaken);
-        return $result->num_rows > 0;
-    }
+    // function isUsernameTaken($db_connection, $username_signIN) {
+    //     $sql_isUserTaken = "SELECT e-mail FROM login WHERE e-mail = '$username_signIN'";
+    //     $result = $db_connection->query($sql_isUserTaken);
+    //     return $result->num_rows > 0;
+    // }
 
         // Receber os dados do formulário
 
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        $username_signIN = $_POST["username"]; //*no html os 'name's precisam ser esses para a senha e usuario
-        $user_password = $_POST["user_password"];
+    // if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    //     $username_signIN = $_POST["username"]; //*no html os 'name's precisam ser esses para a senha e usuario
+    //     $user_password = $_POST["user_password"];
 
         // Verificar se o nome de usuário já existe
 
-        if (isUsernameTaken($db_connection, $username_signIN)) {
-            echo "Nome de usuário já existe. Escolha outro.";
-        } 
+        // if (isUsernameTaken($db_connection, $username_signIN)) {
+        //     echo "Nome de usuário já existe. Escolha outro.";
+        // } 
         
-        else {
+        // else {
             
             // Verificar se a senha atende aos critérios mínimos de segurança
         
-            if (strlen($user_password) < 6) {
-                echo "A senha deve ter pelo menos 6 caracteres.";
-            } 
+            // if (strlen($user_password) < 6) {
+            //     echo "A senha deve ter pelo menos 6 caracteres.";
+            // } 
 
-            elseif (strlen($user_password) > 18) {
-                echo "A senha deve ter menos de 19 caracteres.";
-            }
+            // elseif (strlen($user_password) > 18) {
+            //     echo "A senha deve ter menos de 19 caracteres.";
+            // }
         
-            else {
-                $user_password = password_hash($user_password, user_password_DEFAULT); // Criptografa a senha
+            // else {
+            //     $user_password = password_hash($user_password, user_password_DEFAULT); // Criptografa a senha
 
             
                 // Inserir os dados no banco de dados
             
-            $sql_insert_login = "INSERT INTO login (e-mail, senha) VALUES ('$username_signIN', '$user_password')";
+    //         $sql_insert_login = "INSERT INTO login (e-mail, senha) VALUES ('$username_signIN', '$user_password')";
 
-            if ($db_connection->query($sql_insert_login) === TRUE) {
-                echo "Cadastro realizado com sucesso.";
-            } else {
-                echo "Erro: " . $sql_insert_login . "<br>" . $db_connection->error; //*dar echo nisso no html
-                }
-            }
-        }
-    }
+    //         if ($db_connection->query($sql_insert_login) === TRUE) {
+    //             echo "Cadastro realizado com sucesso.";
+    //         } else {
+    //             echo "Erro: " . $sql_insert_login . "<br>" . $db_connection->error; //*dar echo nisso no html
+    //             }
+    //         }
+    //     }
+    // }
 
 
     //Validação de login
@@ -117,22 +117,34 @@
     }
 }
     
-
-
-
-
     $db_connection->close();
 
 
 
 
-/*    if ($senha === $senha2) {
-        echo "Login bem-sucedido!";
-    } else {
-        echo "Credenciais inválidas. Tente novamente.";
-    }
+//inacabado -->   if ($senha === $senha2) {
+//        echo "Login bem-sucedido!";
+//    } else {
+//        echo "Credenciais inválidas. Tente novamente.";
+//    }
 
 
 //devo colocar em funções?
 // a variavel username_signIn só é assim por conta de não ter funções, se não se chamaria apenas username
+
+
+//parte do botão search
+$search = $_POST['search'];
+$stmt = $con->prepare("SELECT * FROM produtos WHERE nome LIKE ?");
+$stmt->bind_param("s", $search);
+$stmt->execute();
+
+
+$result = $stmt->get_result();
+$results = $result->fetch_all(MYSQLI_ASSOC);
+echo json_encode($results);
+
+$stmt->close();
+$con->close();
+
 ?>
